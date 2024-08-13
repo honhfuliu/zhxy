@@ -1,0 +1,128 @@
+{
+  "id": "4421818",
+  "name": "寒假",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1002515",
+      "name": "手机号",
+      "font_class": "shoujihao",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "4552970",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e908",
+      "unicode_decimal": 59656
+    },
+    {
+      "icon_id": "3040356",
+      "name": "密码修改",
+      "font_class": "mimaxiugai",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "3176681",
+      "name": "个人信息展示与维护",
+      "font_class": "gerenxinxizhanshiyuweihu",
+      "unicode": "e7ec",
+      "unicode_decimal": 59372
+    },
+    {
+      "icon_id": "4218489",
+      "name": "头像_上传头像",
+      "font_class": "touxiang_shangchuantouxiang",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "11661839",
+      "name": "个人信息设置",
+      "font_class": "gerenxinxishezhi",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "34702362",
+      "name": "账号介绍",
+      "font_class": "zhanghaojieshao",
+      "unicode": "e6f0",
+      "unicode_decimal": 59120
+    },
+    {
+      "icon_id": "29359011",
+      "name": "icon／智慧校园",
+      "font_class": "a-iconzhihuixiaoyuan",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "729340",
+      "name": "个人信息",
+      "font_class": "gerenxinxi",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "3161597",
+      "name": "管理员_角色管理",
+      "font_class": "guanliyuan_jiaoseguanli",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "4300068",
+      "name": "班级管理",
+      "font_class": "banjiguanli",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "4307385",
+      "name": "教师设置",
+      "font_class": "jiaoshishezhi",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "20367692",
+      "name": "年级管理",
+      "font_class": "nianjiguanli",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "584065",
+      "name": "退出",
+      "font_class": "084tuichu",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "34002951",
+      "name": "学生管理",
+      "font_class": "xueshengguanli",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "924721",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "8288855",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e850",
+      "unicode_decimal": 59472
+    }
+  ]
+}

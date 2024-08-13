@@ -1,0 +1,300 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost
+ Source Server Type    : MySQL
+ Source Server Version : 80031
+ Source Host           : localhost:3306
+ Source Schema         : zhxy
+
+ Target Server Type    : MySQL
+ Target Server Version : 80031
+ File Encoding         : 65001
+
+ Date: 04/03/2024 20:17:42
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for grade
+-- ----------------------------
+DROP TABLE IF EXISTS `grade`;
+CREATE TABLE `grade`  (
+  `gid` int NOT NULL AUTO_INCREMENT COMMENT '年级id',
+  `g_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '年级名称',
+  `start_year` date NULL DEFAULT NULL COMMENT '年级开始',
+  `end_year` date NULL DEFAULT NULL COMMENT '年级结束',
+  `is_delete` int NOT NULL DEFAULT 0 COMMENT '是否删除 0 未删除  1删除',
+  `create_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '创建人',
+  `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间 ',
+  `modified_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '修改人',
+  `modified_time` datetime NULL DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`gid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of grade
+-- ----------------------------
+INSERT INTO `grade` VALUES (1, '一年级各damn', '2024-02-26', '2024-03-26', 0, 'admin', '2024-02-26 13:26:41', 'rencai', '2024-02-26 23:29:58');
+INSERT INTO `grade` VALUES (2, '二年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:27:41', 'admin', '2024-02-26 13:27:55');
+INSERT INTO `grade` VALUES (3, '三年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:28:41', 'admin', '2024-02-26 13:28:55');
+INSERT INTO `grade` VALUES (4, '四年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:29:41', 'admin', '2024-02-26 13:29:55');
+INSERT INTO `grade` VALUES (5, '五年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:30:41', 'admin', '2024-02-26 13:30:55');
+INSERT INTO `grade` VALUES (6, '六年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:31:41', 'admin', '2024-02-26 13:31:55');
+INSERT INTO `grade` VALUES (7, '七年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:32:41', 'admin', '2024-02-26 13:32:55');
+INSERT INTO `grade` VALUES (8, '八年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:33:41', 'admin', '2024-02-26 13:33:55');
+INSERT INTO `grade` VALUES (9, '九年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:34:41', 'admin', '2024-02-26 13:34:55');
+INSERT INTO `grade` VALUES (10, '十年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 13:35:41', 'admin', '2024-02-26 13:35:55');
+INSERT INTO `grade` VALUES (11, '11年级', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 21:40:17', 'admin', '2024-02-26 21:40:17');
+INSERT INTO `grade` VALUES (12, '人才2版', '2024-02-26', '2024-02-26', 0, 'admin', '2024-02-26 21:51:03', 'admin', '2024-02-26 21:51:03');
+INSERT INTO `grade` VALUES (13, '人才3版', '2024-02-29', '2025-02-27', 1, 'admin', '2024-02-26 21:51:58', 'admin', '2024-02-26 22:44:22');
+INSERT INTO `grade` VALUES (14, '人才四班', '2024-02-29', '2025-02-27', 1, 'admin', '2024-02-26 21:53:31', 'admin', '2024-02-26 22:44:11');
+INSERT INTO `grade` VALUES (15, '88888', '2024-03-01', '2024-04-01', 0, 'admin', '2024-02-26 23:09:13', 'admin', '2024-02-29 23:18:23');
+INSERT INTO `grade` VALUES (16, '8989898', '2024-02-29', '2025-02-27', 0, 'admin', '2024-02-29 23:18:38', 'admin', '2024-02-29 23:18:38');
+INSERT INTO `grade` VALUES (17, '696969', '2024-03-03', '2024-03-03', 0, 'admin', '2024-03-03 16:18:52', 'admin', '2024-03-03 16:18:52');
+INSERT INTO `grade` VALUES (18, '787878', '2024-03-03', '2024-03-03', 0, 'admin', '2024-03-03 16:20:54', 'admin', '2024-03-03 16:20:54');
+INSERT INTO `grade` VALUES (19, '456', '2024-03-03', '2024-03-03', 0, 'admin', '2024-03-03 16:59:19', 'admin', '2024-03-03 16:59:19');
+INSERT INTO `grade` VALUES (20, '789', '2024-03-03', '2024-03-03', 0, 'admin', '2024-03-03 16:59:54', 'admin', '2024-03-03 16:59:54');
+INSERT INTO `grade` VALUES (21, '6666666', '2024-03-03', '2024-03-03', 1, 'admin', '2024-03-03 17:00:50', 'admin', '2024-03-04 17:52:38');
+INSERT INTO `grade` VALUES (22, '65654', '2024-03-07', '2024-03-29', 0, 'admin', '2024-03-03 17:53:06', 'admin', '2024-03-03 17:53:06');
+
+-- ----------------------------
+-- Table structure for student
+-- ----------------------------
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE `student`  (
+  `sid` int NOT NULL AUTO_INCREMENT COMMENT '学生id',
+  `s_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '学生名称',
+  `user_id` int NULL DEFAULT NULL COMMENT '所属用户id',
+  `class_id` int NULL DEFAULT NULL COMMENT '所属班级id',
+  `grade_id` int NULL DEFAULT NULL COMMENT '所属年级id',
+  `enrollment_date` datetime NULL DEFAULT NULL COMMENT '入学时间',
+  `create_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-创建人',
+  `create_time` datetime NULL DEFAULT NULL COMMENT '日志-创建时间\r\n',
+  `modified_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-修改人',
+  `modified_time` datetime NULL DEFAULT NULL COMMENT '日志-修改时间',
+  PRIMARY KEY (`sid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of student
+-- ----------------------------
+INSERT INTO `student` VALUES (1, '张宝成', 58, 2, 2, '2024-03-07 17:01:07', 'admin', '2024-03-01 17:01:14', 'admin', '2024-03-02 16:24:37');
+INSERT INTO `student` VALUES (3, '王五', 60, 2, 3, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (4, '赵六', 61, 3, 2, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (5, '钱七', 62, 1, 1, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (6, '孙八', 63, 2, 3, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (7, '周九', 64, 3, 2, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (8, '吴十', 65, 1, 1, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (9, '郑十一', 66, 2, 3, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (10, '王十二', 67, 3, 2, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (11, '李十三', 68, 1, 1, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (12, '赵十四', 69, 2, 3, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (13, '孙十五', 70, 3, 2, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (14, '周十六', 71, 1, 1, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (15, '吴十七', 72, 2, 3, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (16, '郑十八', 73, 3, 2, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (17, '王十九', 74, 1, 1, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (18, '李二十', 75, 2, 3, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (19, '赵二十一', 76, 3, 2, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (20, '孙二十二', 77, 1, 1, '2024-03-01 17:01:07', 'admin', '2024-03-01 17:01:14', NULL, NULL);
+INSERT INTO `student` VALUES (23, '66666', 3, 10, 10, '2024-03-03 00:00:00', 'admin', '2024-03-02 14:01:59', 'admin', '2024-03-04 17:34:01');
+INSERT INTO `student` VALUES (24, '66666', 78, 24, 2, '2024-03-03 22:27:54', 'admin', '2024-03-03 22:27:59', 'admin', '2024-03-03 22:27:59');
+
+-- ----------------------------
+-- Table structure for t_class
+-- ----------------------------
+DROP TABLE IF EXISTS `t_class`;
+CREATE TABLE `t_class`  (
+  `cid` int NOT NULL AUTO_INCREMENT COMMENT '班级id',
+  `gid` int NOT NULL COMMENT '年级id 外键',
+  `head_teacher_id` int NULL DEFAULT NULL COMMENT '班主任id 外键',
+  `class_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '班级名称',
+  `class_term` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '学期',
+  `create_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-创建人',
+  `create_time` datetime NULL DEFAULT NULL COMMENT '日志-创建时间',
+  `modified_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-修改人',
+  `modified_time` datetime NULL DEFAULT NULL COMMENT '日志-修改时间',
+  PRIMARY KEY (`cid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of t_class
+-- ----------------------------
+INSERT INTO `t_class` VALUES (1, 10, 1, '人才一版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (2, 2, 1, '人才二版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (3, 3, 1, '人才三版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (4, 4, 2, '人才四版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (5, 5, 2, '人才五版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (6, 6, 2, '人才六版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (7, 7, 2, '人才七版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (8, 8, 2, '人才八版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (9, 9, 2, '人才九版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (10, 10, 2, '人才十版', '第一学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (11, 1, 1, '人才十一版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (12, 2, 1, '人才十二版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (13, 3, 1, '人才十三版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (14, 4, 1, '人才十四版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (15, 5, 1, '人才十五版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (16, 6, 2, '人才十六版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (17, 7, 2, '人才十七版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (18, 8, 1, '人才十八版', '第二学期', 'admin', '2024-02-27 15:01:06', NULL, NULL);
+INSERT INTO `t_class` VALUES (21, 7, 24, '网络讯飞2201', '2021-2025', 'admin', '2024-02-28 15:20:59', 'admin', '2024-03-04 10:41:01');
+INSERT INTO `t_class` VALUES (22, 1, 2, '计算机科学2301', '2023-2027', 'admin', '2024-02-28 15:41:05', 'admin', '2024-02-28 20:11:15');
+INSERT INTO `t_class` VALUES (23, 5, 6, '傻逼', '20-23', 'admin', '2024-02-29 23:05:32', 'admin', '2024-02-29 23:05:52');
+INSERT INTO `t_class` VALUES (24, 2, 20, '123456', '123', 'admin', '2024-03-03 16:16:07', 'admin', '2024-03-04 10:40:48');
+INSERT INTO `t_class` VALUES (25, 2, 8, '456', '789', 'admin', '2024-03-03 16:18:10', 'admin', '2024-03-03 16:18:10');
+INSERT INTO `t_class` VALUES (26, 1, 12, '6669996', '8989', '6666', '2024-03-04 17:28:06', '6666', '2024-03-04 17:28:06');
+
+-- ----------------------------
+-- Table structure for t_user
+-- ----------------------------
+DROP TABLE IF EXISTS `t_user`;
+CREATE TABLE `t_user`  (
+  `uid` int NOT NULL AUTO_INCREMENT COMMENT '用户id',
+  `username` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '用户名',
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '密码',
+  `salt` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '盐值',
+  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '手机号码',
+  `email` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '邮箱',
+  `gender` int NULL DEFAULT NULL COMMENT '性别0 女  1 男',
+  `avatar` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '头像',
+  `role` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '角色\r\nADMIN 管理员\r\nTEACHER 老师\r\nSTUDENT 学生',
+  `is_delete` int NOT NULL DEFAULT 0 COMMENT '是否删除： 0未删除 1已删除',
+  `create_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-创建人',
+  `create_time` datetime NULL DEFAULT NULL COMMENT '日志-创建时间',
+  `modified_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-修改人',
+  `modified_time` datetime NULL DEFAULT NULL COMMENT '日志-修改时间',
+  PRIMARY KEY (`uid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 79 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of t_user
+-- ----------------------------
+INSERT INTO `t_user` VALUES (1, 'rencai', '577F391C1C052600FE1EFDCD73C88CB0', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, 'upload/A2253785-7D5F-4A22-9370-CA6232ACE53A.jpg', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-03-04 17:28:06');
+INSERT INTO `t_user` VALUES (2, 'rencai1', 'D31E97D40CE336D83AC9B1FE73B8418F', 'CEBA1318-691D-4285-A504-8F395CA36937', '', '', 0, '', 'ADMIN', 0, 'rencai1', '2024-02-04 23:04:57', 'rencai1', '2024-02-04 23:04:57');
+INSERT INTO `t_user` VALUES (3, 'rencai2', '3D2117753548154CC7EDEC6AECA90220', 'ED0C482F-E613-43F2-80B9-87B8C1700646', '123456789', '987@qq.com', 1, 'upload/BD0B549A-23EF-4991-A996-FB3456990108.jpg', 'STUDENT', 0, 'rencai2', '2024-02-04 23:05:59', 'rencai2', '2024-02-16 23:19:33');
+INSERT INTO `t_user` VALUES (4, 'renci1', 'D41AD4827CE8578A5826955C3AEE2A5A', '1EEA4A08-0344-475D-88E5-AB0D873D6B26', '66666', '777777', 0, NULL, 'STUDENT', 0, 'renci1', '2024-02-04 23:09:30', 'renci1', '2024-03-03 22:20:47');
+INSERT INTO `t_user` VALUES (5, 'laoshi1', 'C7BCE70AA5E52921E0C7538DC6B7A7A0', '687DE450-FD58-4117-AAC9-EE76FA897889', '18869700309', '3120@qq.com', 0, 'upload/7CC66AB1-6756-4C8B-81E8-BA7B6B8C872D.jpeg', 'TEACHER', 0, 'laoshi1', '2024-02-15 17:26:24', 'rencai', '2024-03-04 17:34:01');
+INSERT INTO `t_user` VALUES (6, 'randomUser1', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (7, 'randomUser2', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (8, 'randomUser3', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (9, 'randomUser4', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (10, 'randomUser5', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (11, 'randomUser6', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (12, 'randomUser7', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (13, 'randomUser8', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (14, 'randomUser9', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (15, 'randomUser10', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (16, 'randomUser11', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (17, 'randomUser12', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (18, 'randomUser13', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (19, 'randomUser14', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (20, 'randomUser15', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (21, 'randomUser16', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (22, 'randomUser17', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (23, 'randomUser18', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (24, 'randomUser19', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 0, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (25, 'randomUser20', '36DC1D63A58B944C57B289BC38C46FB7', '6D9A75EB-350C-4193-AF9C-50F00C8E1ECF', '13577784934', '1233456@qq.com', 1, '', 'ADMIN', 0, 'rencai', '2024-02-04 22:13:33', 'rencai', '2024-02-17 16:01:05');
+INSERT INTO `t_user` VALUES (26, 'admin', '3E801F1F59F22A290A798E1B81A5533D', 'B9496FC6-0345-498E-8855-7A8D19B87A37', '18869700309', 'ziheng870@gmail.com', 1, 'upload/8E8A240B-E0D5-4A0A-BEBD-383ECF3369F8.jpg', 'ADMIN', 0, 'rencai', '2024-02-25 17:36:21', 'admin', '2024-03-04 17:57:09');
+INSERT INTO `t_user` VALUES (27, 'admin1', '25C522F4D2739C0CF601436205AC4A86', 'A925AB25-C7D6-46E4-A778-2A4F477F19C3', '123456', '123456', 0, NULL, 'ADMIN', 0, 'admin', '2024-02-25 17:40:29', 'admin', '2024-02-25 17:40:29');
+INSERT INTO `t_user` VALUES (28, 'admin2', '5326D1BF039B63EDBBA4EC64CDEB33DB', '094C6376-E387-4E62-AF25-A874C847FD6D', '123456', '123456', 1, NULL, 'ADMIN', 0, 'admin', '2024-02-25 17:41:29', 'admin', '2024-02-25 17:41:29');
+INSERT INTO `t_user` VALUES (29, '', 'C2D053F0DE8BD626EE459002ADFB35A6', 'A74249B9-565C-44F0-817C-5C8980BFA6F0', '123456', '123456', 0, NULL, 'ADMIN', 1, 'admin', '2024-02-25 17:41:44', 'admin', '2024-02-25 22:01:25');
+INSERT INTO `t_user` VALUES (30, '123', '30F9866D59FBC376E63604A863C9A0E9', '2B1AC4DA-207C-4F81-8797-B8C1CE641DA8', '', '', NULL, NULL, 'ADMIN', 1, 'admin', '2024-02-25 20:00:33', 'admin', '2024-02-25 22:01:22');
+INSERT INTO `t_user` VALUES (31, 'admin03', 'F3F967F454120C69FDB062357BB8248C', '3AEB82A4-C9D4-4FB3-B199-09F12FFC63A2', '', '', NULL, NULL, 'ADMIN', 1, 'admin', '2024-02-25 20:11:06', 'admin', '2024-02-25 21:08:48');
+INSERT INTO `t_user` VALUES (32, 'test001', '8899D403857516C1E5425244DB9EDEC7', 'A8839007-F1A3-4FD0-8B15-627F1586BBC6', '123465', '123456', 0, 'upload/E7957B64-068C-4C0D-8F19-DD8BED70D178.jpg', 'ADMIN', 0, 'admin', '2024-02-25 22:16:00', 'test001', '2024-02-25 23:07:38');
+INSERT INTO `t_user` VALUES (33, 'test002', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188697', '123456', 0, NULL, 'ADMIN', 0, 'admin', '2024-02-25 22:20:42', 'admin', '2024-02-29 23:19:14');
+INSERT INTO `t_user` VALUES (34, 'teacher001', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '13577784934', 'teacher001@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (35, 'teacher002', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '13577784934', 'teacher002@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (36, 'teacher003', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188700', 'teacher003@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (37, 'teacher004', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188701', 'teacher004@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (38, 'teacher005', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188702', 'teacher005@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (39, 'teacher006', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188703', 'teacher006@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (40, 'teacher007', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188704', 'teacher007@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (41, 'teacher008', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188705', 'teacher008@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (42, 'teacher009', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188706', 'teacher009@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (43, 'teacher010', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188707', 'teacher010@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (44, 'teacher011', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188708', 'teacher011@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (45, 'teacher012', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188709', 'teacher012@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (46, 'teacher013', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188710', 'teacher013@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (47, 'teacher014', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188711', 'teacher014@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (48, 'teacher015', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188712', 'teacher015@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (49, 'teacher016', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188713', 'teacher016@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (50, 'teacher017', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188714', 'teacher017@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (51, 'teacher018', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188715', 'teacher018@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (52, 'teacher019', '8832CC68DD51B943A694E19704CC3937', 'D448B629-8C7E-4554-9C25-096F47B803B8', '188716', 'teacher019@example.com', 0, NULL, 'TEACHER', 0, 'admin', '2024-02-25 22:21:00', 'admin', '2024-02-25 23:04:15');
+INSERT INTO `t_user` VALUES (53, 'llllll', 'FD9D006F0D376DC0CBCCBDF824B99329', 'FDE01599-DAE6-41E3-93CC-F9490A531481', NULL, NULL, NULL, NULL, 'TEACHER', 0, 'llllll', '2024-02-28 23:01:46', 'llllll', '2024-02-28 23:01:46');
+INSERT INTO `t_user` VALUES (54, 'sdsdsd', 'E8D8FF0516723BDC3500D7FB4385B773', 'B45273A0-19C4-418F-86C2-4F66BC289565', NULL, NULL, NULL, NULL, 'TEACHER', 0, 'sdsdsd', '2024-02-28 23:02:14', 'sdsdsd', '2024-02-28 23:02:14');
+INSERT INTO `t_user` VALUES (55, 'laoshi6666', 'ADF88F3556F9C10835D548D7C8BB604E', 'F709FD98-6FC0-4CC5-9251-CFE6F13D14A8', NULL, NULL, NULL, NULL, 'TEACHER', 0, 'laoshi6666', '2024-02-29 14:12:46', 'laoshi6666', '2024-02-29 14:12:46');
+INSERT INTO `t_user` VALUES (56, 'xianglaoshi', 'AE268F4B5407488D401C222415BE822A', '8B331AE8-F30D-4260-9338-CC7C05E934E0', NULL, NULL, NULL, NULL, 'TEACHER', 0, 'xianglaoshi', '2024-02-29 15:00:46', 'xianglaoshi', '2024-02-29 15:00:46');
+INSERT INTO `t_user` VALUES (57, 'ceshi0666', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784934', '31245678@qq.com', 1, NULL, 'TEACHER', 0, 'ceshi0666', '2024-02-29 16:00:47', 'ceshi0666', '2024-03-01 16:07:47');
+INSERT INTO `t_user` VALUES (58, 'stu1', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784935', 'stu1@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (59, 'stu2', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784936', 'stu2@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (60, 'stu3', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784937', 'stu3@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (61, 'stu4', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784938', 'stu4@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (62, 'stu5', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784939', 'stu5@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (63, 'stu6', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784940', 'stu6@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (64, 'stu7', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784941', 'stu7@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (65, 'stu8', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784942', 'stu8@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (66, 'stu9', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784943', 'stu9@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (67, 'stu10', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784944', 'stu10@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (68, 'stu11', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784945', 'stu11@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (69, 'stu12', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784946', 'stu12@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (70, 'stu13', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784947', 'stu13@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (71, 'stu14', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784948', 'stu14@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (72, 'stu15', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784949', 'stu15@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (73, 'stu16', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784950', 'stu16@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (74, 'stu17', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784951', 'stu17@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (75, 'stu18', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784952', 'stu18@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (76, 'stu19', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784953', 'stu19@qq.com', 1, NULL, 'STUDENT', 0, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (77, 'stu20', '1EEEDCFF8D99AD7B20207CCF6A19F6DC', 'CB6F8736-BA7F-4193-A9B3-8659D55C0941', '13577784954', 'stu20@qq.com', 1, NULL, 'STUDENT', 1, 'admin', '2024-03-01 16:00:00', 'admin', '2024-03-01 16:00:00');
+INSERT INTO `t_user` VALUES (78, 'zhangsan1', '8B255D4D8B4EDFCDF199565A9097E88F', '38B28BCA-44DA-44DC-B51A-7FEA9BF3F600', '18869700309', '123456@qq.com', 0, 'upload/4E9B903D-851C-4DA4-BCA7-B10F00420BBF.jpg', 'STUDENT', 0, 'zhangsan1', '2024-03-02 11:42:59', 'zhangsan1', '2024-03-03 22:19:19');
+
+-- ----------------------------
+-- Table structure for teacher
+-- ----------------------------
+DROP TABLE IF EXISTS `teacher`;
+CREATE TABLE `teacher`  (
+  `t_id` int NOT NULL AUTO_INCREMENT COMMENT '老师id\r\n',
+  `t_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '老师名称',
+  `course` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '教学科目',
+  `account_id` int NOT NULL COMMENT '用户id',
+  `entry_time` datetime NULL DEFAULT NULL COMMENT '入职时间',
+  `degree` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '学历',
+  `create_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-创建人',
+  `create_time` datetime NULL DEFAULT NULL COMMENT '日志-创建时间',
+  `modified_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日志-修改人',
+  `modified_time` datetime NULL DEFAULT NULL COMMENT '日志-修改时间',
+  PRIMARY KEY (`t_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of teacher
+-- ----------------------------
+INSERT INTO `teacher` VALUES (1, '李老师', '人工智能', 34, '2024-02-28 21:29:45', '本科', 'admin', '2024-02-28 21:30:10', NULL, NULL);
+INSERT INTO `teacher` VALUES (2, '刘老师', 'java开发', 35, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (5, '李老师', '英语', 38, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (6, '赵老师', '化学', 39, '2024-02-28 21:30:19', '硕士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (7, '陈老师', '物理', 40, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (8, '刘老师', '生物', 41, '2024-02-28 21:30:19', '博士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (9, '黄老师', '历史', 42, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (10, '许老师', '地理', 43, '2024-02-28 21:30:19', '硕士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (11, '何老师', '政治', 44, '2024-02-28 21:30:19', '博士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (12, '孙老师', '体育', 45, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (13, '吴老师', '音乐', 46, '2024-02-28 21:30:19', '硕士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (14, '冯老师', '美术', 47, '2024-02-28 21:30:19', '博士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (15, '郑老师', '计算机', 48, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (16, '周老师', '物理', 49, '2024-02-28 21:30:19', '硕士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (17, '吕老师', '化学', 50, '2024-02-28 21:30:19', '博士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (18, '任老师', '数学', 51, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (19, '杨老师', '语文', 52, '2024-02-28 21:30:19', '硕士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (20, '马老师', '英语', 53, '2024-02-28 21:30:19', '博士', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (21, '朱老师', '生物', 54, '2024-02-28 21:30:19', '本科', 'admin', '2024-02-28 21:30:28', NULL, NULL);
+INSERT INTO `teacher` VALUES (22, '6666', '789', 5, '2024-02-29 14:39:24', '1244', 'admin', '2024-02-29 14:39:25', 'admin', '2024-02-29 14:39:25');
+INSERT INTO `teacher` VALUES (24, '向大伟', '睡觉是一门艺术', 56, '2024-02-29 15:11:19', '博士', 'admin', '2024-02-29 15:11:22', 'admin', '2024-02-29 15:11:22');
+INSERT INTO `teacher` VALUES (25, '想云端', '不知道', 57, '2024-02-29 16:04:28', '专科', 'admin', '2024-02-29 16:04:31', 'admin', '2024-02-29 16:04:31');
+INSERT INTO `teacher` VALUES (26, 'nima', '789', 37, '2024-03-04 17:34:01', '1244', 'admin', '2024-02-29 19:23:18', 'admin', '2024-03-04 17:34:01');
+
+SET FOREIGN_KEY_CHECKS = 1;

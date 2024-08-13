@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5aa11e0-e3e8-4001-9a0b-4e710dfd2968" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Mybatis Mapper" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Maven\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Maven/apache-maven-3.8.8" />
+        <option name="userSettingsFile" value="E:\Maven\maven.aliyun.com\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2boGCm0rNrQ6IvL6FQ6KQrHlYM3" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17 (4)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/newjavaproject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;android.project.structure&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;02692cb114a84e9fbeba0fa699f1e17e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\myProject\智慧校园\zhxy" />
+      <recent name="E:\myProject\智慧校园\zhxy\src\main\java\com\ziheng\zhxy\controller" />
+      <recent name="E:\myProject\智慧校园\zhxy\src\main\resources\static" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ziheng.zhxy.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ZhxyApplication">
+    <configuration name="GradeServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zhxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ziheng.zhxy.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ziheng.zhxy.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ziheng.zhxy.service.impl.GradeServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GradeServiceImplTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zhxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ziheng.zhxy.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ziheng.zhxy.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ziheng.zhxy.service.impl.GradeServiceImplTest" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentServiceImplTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zhxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ziheng.zhxy.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ziheng.zhxy.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ziheng.zhxy.service.impl.StudentServiceImplTest" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentServiceImplTest.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zhxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ziheng.zhxy.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ziheng.zhxy.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ziheng.zhxy.service.impl.StudentServiceImplTest" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentServiceImplTest.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zhxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ziheng.zhxy.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ziheng.zhxy.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ziheng.zhxy.service.impl.StudentServiceImplTest" />
+      <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZhxyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="zhxy" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ziheng.zhxy.ZhxyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GradeServiceImplTest" />
+        <item itemvalue="JUnit.GradeServiceImplTest.test01" />
+        <item itemvalue="JUnit.StudentServiceImplTest.test03" />
+        <item itemvalue="JUnit.StudentServiceImplTest.test02" />
+        <item itemvalue="JUnit.StudentServiceImplTest.test01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5aa11e0-e3e8-4001-9a0b-4e710dfd2968" name="Changes" comment="" />
+      <created>1706873906819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706873906819</updated>
+      <workItem from="1706873907845" duration="5160000" />
+      <workItem from="1706885050845" duration="605000" />
+      <workItem from="1706959850721" duration="1221000" />
+      <workItem from="1706967195788" duration="163000" />
+      <workItem from="1706967374394" duration="559000" />
+      <workItem from="1706967992968" duration="2370000" />
+      <workItem from="1707034725200" duration="7119000" />
+      <workItem from="1707097677328" duration="12184000" />
+      <workItem from="1707269864858" duration="626000" />
+      <workItem from="1707380456003" duration="2799000" />
+      <workItem from="1707475483802" duration="1984000" />
+      <workItem from="1707530855698" duration="8132000" />
+      <workItem from="1707702313202" duration="600000" />
+      <workItem from="1707812668341" duration="366000" />
+      <workItem from="1707971961706" duration="8445000" />
+      <workItem from="1707981967440" duration="3000" />
+      <workItem from="1707982191281" duration="9702000" />
+      <workItem from="1708060856344" duration="603000" />
+      <workItem from="1708061844859" duration="11857000" />
+      <workItem from="1708096977221" duration="134000" />
+      <workItem from="1708136053387" duration="5745000" />
+      <workItem from="1708260335773" duration="1652000" />
+      <workItem from="1708308189953" duration="10587000" />
+      <workItem from="1708424464043" duration="612000" />
+      <workItem from="1708496936216" duration="1903000" />
+      <workItem from="1708840398472" duration="19394000" />
+      <workItem from="1708914023751" duration="17032000" />
+      <workItem from="1708994159306" duration="21487000" />
+      <workItem from="1709080473093" duration="24678000" />
+      <workItem from="1709173061858" duration="10224000" />
+      <workItem from="1709185609144" duration="13185000" />
+      <workItem from="1709262192497" duration="11802000" />
+      <workItem from="1709349365724" duration="15384000" />
+      <workItem from="1709443917197" duration="23399000" />
+      <workItem from="1709518742265" duration="1660000" />
+      <workItem from="1709523704033" duration="8588000" />
+      <workItem from="1709556582344" duration="611000" />
+      <workItem from="1709557210740" duration="334000" />
+      <workItem from="1709557555476" duration="8172000" />
+      <workItem from="1709566685782" duration="235000" />
+      <workItem from="1709567451914" duration="133000" />
+      <workItem from="1709602975702" duration="2826000" />
+      <workItem from="1709616777218" duration="10000" />
+      <workItem from="1709631832082" duration="10048000" />
+      <workItem from="1709705224552" duration="1199000" />
+      <workItem from="1709866239681" duration="9000" />
+      <workItem from="1710563902463" duration="470000" />
+      <workItem from="1710680841929" duration="2661000" />
+      <workItem from="1710825301525" duration="3126000" />
+      <workItem from="1711522818054" duration="530000" />
+      <workItem from="1712240704555" duration="2087000" />
+      <workItem from="1712494330732" duration="1298000" />
+      <workItem from="1712632120206" duration="1013000" />
+      <workItem from="1712633530704" duration="10000" />
+      <workItem from="1712714510822" duration="2546000" />
+      <workItem from="1712741088999" duration="11000" />
+      <workItem from="1712744025582" duration="199000" />
+      <workItem from="1712744505493" duration="1838000" />
+      <workItem from="1712757735135" duration="77000" />
+      <workItem from="1712815205623" duration="48000" />
+      <workItem from="1712819946402" duration="21000" />
+      <workItem from="1712820019146" duration="27000" />
+      <workItem from="1712826216025" duration="1291000" />
+      <workItem from="1712847922837" duration="1304000" />
+      <workItem from="1712850150733" duration="658000" />
+      <workItem from="1712900888947" duration="99000" />
+      <workItem from="1713073532623" duration="49000" />
+      <workItem from="1713075513528" duration="171000" />
+      <workItem from="1713077275279" duration="1492000" />
+      <workItem from="1713083968774" duration="1450000" />
+      <workItem from="1713141425711" duration="211000" />
+      <workItem from="1713182533546" duration="3898000" />
+      <workItem from="1713249640120" duration="2126000" />
+      <workItem from="1713422920032" duration="1204000" />
+      <workItem from="1713427113113" duration="51000" />
+      <workItem from="1713429212704" duration="940000" />
+      <workItem from="1713536346188" duration="612000" />
+      <workItem from="1713705042018" duration="149000" />
+      <workItem from="1713877209180" duration="576000" />
+      <workItem from="1713878538297" duration="613000" />
+      <workItem from="1713884053107" duration="20000" />
+      <workItem from="1713948830164" duration="16000" />
+      <workItem from="1714020444615" duration="670000" />
+      <workItem from="1714058501859" duration="133000" />
+      <workItem from="1714119638279" duration="101000" />
+      <workItem from="1714317423217" duration="11000" />
+      <workItem from="1715649968914" duration="6016000" />
+      <workItem from="1715671822748" duration="614000" />
+      <workItem from="1715682990340" duration="623000" />
+      <workItem from="1715696060467" duration="55000" />
+      <workItem from="1715764522846" duration="663000" />
+      <workItem from="1716459241903" duration="1982000" />
+      <workItem from="1716862994675" duration="4316000" />
+      <workItem from="1716879856131" duration="1266000" />
+      <workItem from="1716907673065" duration="597000" />
+      <workItem from="1716968787348" duration="13000" />
+      <workItem from="1721547126148" duration="2297000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ziheng/zhxy/service/impl/AdminServiceImpl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

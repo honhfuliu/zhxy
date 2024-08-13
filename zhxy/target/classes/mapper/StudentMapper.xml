@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ziheng.zhxy.mapper.StudentMapper">
+
+    <resultMap id="BaseResultMap" type="com.ziheng.zhxy.entity.Student">
+            <id property="sid" column="sid" jdbcType="INTEGER"/>
+            <result property="sName" column="s_name" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="classId" column="class_id" jdbcType="INTEGER"/>
+            <result property="gradeId" column="grade_id" jdbcType="INTEGER"/>
+            <result property="enrollmentDate" column="enrollment_date" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="modifiedUser" column="modified_user" jdbcType="VARCHAR"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        sid,s_name,user_id,
+        clsaa_id,grade_id,enrollment_date,
+        create_user,create_time,modified_user,
+        modified_time
+    </sql>
+    <select id="getPageStudent" resultType="com.ziheng.zhxy.domain.dot.studentDOT.studentPageDOT">
+        SELECT
+            student.sid, student.s_name, student.enrollment_date,
+            t_user.username, t_user.phone, t_user.email, t_user.gender,
+            t_class.class_name,
+            grade.g_name
+        FROM
+            student
+                INNER JOIN
+            t_user
+            ON
+                student.user_id = t_user.uid
+                INNER JOIN
+            t_class
+            ON
+                student.class_id = t_class.cid
+                INNER JOIN
+            grade
+            ON
+                student.grade_id = grade.gid
+        WHERE
+            <if test="name != null and name != ''">
+                student.s_name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="name != null and name != ''">
+                AND
+            </if>
+            t_user.role = "STUDENT"
+        AND
+            t_user.is_delete = 0
+        ORDER BY
+            student.create_time
+        DESC
+        LIMIT #{PageNo},#{PageSize}
+    </select>
+    <select id="getQueryPageCount" resultType="java.lang.Integer">
+        select
+            count(s_name)
+        from
+            student
+        <where>
+            <if test="name != null and name != ''">
+                s_name like CONCAT('%', #{name}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>

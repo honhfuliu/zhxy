@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ziheng.zhxy.mapper.TUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.ziheng.zhxy.entity.TUser">
+            <id property="uid" column="uid" jdbcType="INTEGER"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="salt" column="salt" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="INTEGER"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="role" column="role" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="modifiedUser" column="modified_user" jdbcType="VARCHAR"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,username,password,
+        salt,phone,email,
+        gender,avatar,role,
+        is_delete,create_user,create_time,
+        modified_user,modified_time
+    </sql>
+    <select id="getByUsername" resultType="com.ziheng.zhxy.entity.TUser">
+        select
+            t_user.uid, t_user.username
+        from
+            t_user
+        left join
+            teacher
+        on
+            t_user.uid = teacher.account_id
+        where
+            t_user.role ="TEACHER"
+        and
+            teacher.account_id is null
+        and
+            t_user.is_delete = 0
+        and
+            t_user.username = #{name}
+    </select>
+
+    <select id="getByStuUsername" resultType="com.ziheng.zhxy.entity.TUser">
+        select
+            t_user.uid, t_user.username
+        from
+            t_user
+                left join
+            student
+            on
+                t_user.uid = student.user_id
+        where
+            t_user.role = "STUDENT"
+          and
+            student.user_id is NULL
+          and
+            t_user.is_delete = 0
+          AND
+            t_user.username = #{name}
+    </select>
+</mapper>

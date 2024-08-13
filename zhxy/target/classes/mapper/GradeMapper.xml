@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ziheng.zhxy.mapper.GradeMapper">
+
+    <resultMap id="BaseResultMap" type="com.ziheng.zhxy.entity.Grade">
+            <id property="gid" column="gid" jdbcType="INTEGER"/>
+            <result property="gName" column="g_name" jdbcType="VARCHAR"/>
+            <result property="startYear" column="start_year" jdbcType="DATE"/>
+            <result property="endYear" column="end_year" jdbcType="DATE"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="modifiedUser" column="modified_user" jdbcType="VARCHAR"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        gid,g_name,start_year,
+        end_year,create_user,create_time,
+        modified_user,modified_time,is_delete
+    </sql>
+    <select id="getAllGrade" resultType="com.ziheng.zhxy.domain.dot.selectValueDot">
+        select gid as value, g_name as label from grade
+    </select>
+</mapper>

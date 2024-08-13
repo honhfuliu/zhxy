@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ziheng.zhxy.mapper.TClassMapper">
+
+    <resultMap id="BaseResultMap" type="com.ziheng.zhxy.entity.TClass">
+            <id property="cid" column="cid" jdbcType="INTEGER"/>
+            <result property="gid" column="gid" jdbcType="INTEGER"/>
+            <result property="headTeacherId" column="head_teacher_id" jdbcType="INTEGER"/>
+            <result property="className" column="class_name" jdbcType="VARCHAR"/>
+            <result property="classTerm" column="class_term" jdbcType="VARCHAR"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="modifiedUser" column="modified_user" jdbcType="VARCHAR"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cid,gid,head_teacher_id,
+        class_name,class_term,create_user,
+        create_time,modified_user,modified_time
+    </sql>
+
+    <!--分页查询数据-->
+    <select id="pageGetClass" resultType="com.ziheng.zhxy.domain.dot.tClass.classDot">
+        select
+            t_class.cid, t_class.class_name, t_class.class_term, grade.g_name, teacher.t_name
+        from
+            t_class
+        inner join
+            grade
+        on
+            t_class.gid = grade.gid
+        left join
+            teacher
+        on
+            t_class.head_teacher_id = teacher.t_id
+        <where>
+            <if test="name != null and name != ''">
+                t_class.class_name like CONCAT('%', #{name}, '%')
+            </if>
+        </where>
+        order by
+            t_class.create_time
+        desc
+        LIMIT #{PageNo},#{PageSize}
+
+    </select>
+    <select id="countClass" resultType="java.lang.Integer">
+        select
+            count(class_name)
+        from
+            t_class
+        <where>
+            <if test="name != null and name != ''">
+                class_name like CONCAT('%', #{name}, '%')
+            </if>
+        </where>
+    </select>
+
+    <select id="getGradeIdClassIdAndName" resultType="com.ziheng.zhxy.domain.dot.selectValueDot">
+        select
+            cid as value, class_name as label
+        from
+            t_class
+        where
+            gid = #{id}
+
+    </select>
+
+</mapper>

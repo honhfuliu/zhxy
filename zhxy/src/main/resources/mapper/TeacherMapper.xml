@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ziheng.zhxy.mapper.TeacherMapper">
+
+    <resultMap id="BaseResultMap" type="com.ziheng.zhxy.entity.Teacher">
+            <id property="tId" column="t_id" jdbcType="INTEGER"/>
+            <result property="tName" column="t_name" jdbcType="VARCHAR"/>
+            <result property="course" column="course" jdbcType="VARCHAR"/>
+            <result property="accountId" column="account_id" jdbcType="INTEGER"/>
+            <result property="entryTime" column="entry_time" jdbcType="TIMESTAMP"/>
+            <result property="degree" column="degree" jdbcType="VARCHAR"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="modifiedUser" column="modified_user" jdbcType="VARCHAR"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        t_id,t_name,course,
+        account_id,entry_time,degree,
+        create_user,create_time,modified_user,
+        modified_time
+    </sql>
+
+    <select id="getAllTeacher" resultType="com.ziheng.zhxy.domain.dot.selectValueDot">
+        SELECT teacher.t_id as value, teacher.t_name  as label
+        FROM teacher
+                 LEFT JOIN t_class ON teacher.t_id = t_class.head_teacher_id
+        WHERE t_class.head_teacher_id IS NULL
+
+        <!--select t_id as value, t_name as label from teacher-->
+    </select>
+    <select id="getPageconditionInfo" resultType="com.ziheng.zhxy.domain.dot.teacherDot.teacherPageDot">
+        select
+            teacher.t_id, teacher.course, teacher.t_name, teacher.entry_time, teacher.degree, t_user.username, t_user.email, t_user.phone
+        from
+            teacher
+        inner join
+            t_user
+        on
+            teacher.account_id = t_user.uid
+        where
+            t_user.role = "TEACHER"
+            <if test="name != null and name != ''">
+                AND teacher.t_name like CONCAT('%', #{name}, '%')
+            </if>
+        order by
+            teacher.create_time
+        desc
+            LIMIT #{PageNo},#{PageSize}
+    </select>
+
+    <select id="countTeacherSum" resultType="java.lang.Integer">
+        select
+            count(t_name) from teacher
+        where
+            account_id is not null
+        <if test="name != null and name != ''">
+            AND teacher.t_name like CONCAT('%', #{name}, '%')
+        </if>
+    </select>
+    <select id="getByIdTeacherInfo" resultType="com.ziheng.zhxy.domain.dot.teacherDot.teacherDot">
+        select
+            teacher.t_id, teacher.t_name, teacher.course, teacher.entry_time, teacher.degree, t_user.username
+        from
+            teacher
+        left join
+            t_user
+        on
+            teacher.t_id = #{id}
+        where
+            teacher.account_id = t_user.uid
+    </select>
+
+
+</mapper>
